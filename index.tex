@@ -200,6 +200,9 @@ Los Contenedores aíslan las aplicaciones entre sí, a menos que se les conecte 
 \subsection{\textbf{¿Cómo podemos ofrecer una solución segura, confiable, escalable y completa de Contenedores con Software Red Hat?}}
 Infraestructura con Red Hat Enterprise Linux: Manténgase ligero y ejecute sus contenedores Linux con un sistema operativo optimizado, seguro y de mínima huella. Platadorma con Red Hat Open Shift: Desarrolle, implemente y administre sus contenedores en cualquier lugar, a cualquier escala. Red Hat® OpenShift es una plataforma de aplicaciones de contenedores que incluye Docker y Kubernetes. Independientemente de la arquitectura de sus aplicaciones, OpenShift le permite construir, desarrollar e implementar fácil y rápidamente en casi cualquier infraestructura, pública o privada
 
+\subsection{\textbf Elección entre contenedor y maquina virtual
+Los contenedores tienen como principal beneficio el aislamiento de aplicaciones y va a compartir los recursos entre todos los contenedores optimizando su uso mientras las máquinas virtuales permiten la administracion del hardware para crear múltiples maquinas en un servidor o varios. Además los contenedores son mucho más ligeros que las máquinas virtuales con el uso de contenedores ya no es necesario instalar multiples sistemas operativos para varias aplicaciones.
+ 
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -211,7 +214,7 @@ Infraestructura con Red Hat Enterprise Linux: Manténgase ligero y ejecute sus c
 
 \item Conclusion 1 : \\ Los contenedores permiten desplegar aplicaciones más rápido, arrancarlas y pararlas más rápido y aprovechar mejor los recursos de hardware. Las máquinas virtuales nos permiten crear sistemas completos totalmente aislados, con mayor control sobre el entorno y mezclando sistemas operativos host y huésped. 
 
-\item Conclusion 2 : \\ 
+\item Conclusion 2 : \\ Si bien usamos los contenedores para desarrollar y desplegar aplicaciones de forma sencilla y rápida la mayoría de las empresas todavía mantienen el uso de máquinas virtuales por su flexibilidad en casos de desastres gracias a que si un servidor falla, la maquina virtual levantará un servidor espejo.
 
 \item Conclusion 3 : \\ 
 
