@@ -176,9 +176,9 @@ Dado que no incluyen sistemas operativos completos, los contenedores requieren r
 De manera muy semejante, los Contenedores Informáticos utilizan una pieza de software a modo de un buque plataforma (ese software casi siempre es Docker), aprovechando ese océano de recursos informáticos (procesador, memoria, red y almacenamiento) sobre el mismo Sistema Operativo.
 
 \subsubsection{\textbf{¿Qué es lo que dice Docker?}}
-"Una imagen de contenedor es un paquete ligero, independiente, ejecutable de una pieza de software que incluye todo lo necesario para ejecutarlo: código, tiempo de ejecución, herramientas del sistema, bibliotecas del sistema, configuraciones."
+Una imagen de contenedor es un paquete ligero, independiente, ejecutable de una pieza de software que incluye todo lo necesario para ejecutarlo: código, tiempo de ejecución, herramientas del sistema, bibliotecas del sistema, configuraciones.
 
-Vale la pena agregar que: "Disponible para aplicaciones basadas en Linux, el software en contenedor siempre funcionará igual, independientemente del entorno." Como ya lo habíamos mencionado líneas arriba: "Los contenedores aíslan el software de su entorno, por ejemplo, las diferencias entre los entornos de desarrollo y de etapas, y ayudan a reducir los conflictos entre los equipos que ejecutan software diferente en la misma infraestructura."
+Vale la pena agregar que: Disponible para aplicaciones basadas en Linux, el software en contenedor siempre funcionará igual, independientemente del entorno. Como ya lo habíamos mencionado líneas arriba: "Los contenedores aíslan el software de su entorno, por ejemplo, las diferencias entre los entornos de desarrollo y de etapas, y ayudan a reducir los conflictos entre los equipos que ejecutan software diferente en la misma infraestructura."
 
 Ahora bien. ¿Qué es Docker? Es proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de Virtualización a nivel de sistema operativo en Linux.
 
@@ -214,7 +214,8 @@ Infraestructura con Red Hat Enterprise Linux: Manténgase ligero y ejecute sus c
 
 \item Conclusion 3 : \\ 
 
-\item Conclusion 4 : \\ 
+\item Conclusion 4 :
+El uso de  Contenedores para una integración e implementación continua es posible porque Docker proporciona un sistema para el control de versiones de imágenes. Puede configurarse un proceso de compilación para extraer el código de un repositorio, compilarlo, empaquetarlo en una imagen Docker y enviar la imagen recién creada a un repositorio de imágenes. A continuación, puede hacerse que el proceso de implementación extraiga la nueva imagen de su repositorio, pruebe la aplicación y la implemente en los servidores de producción. Pudiendo evitar tener una aplicación que funcione en su entorno de desarrollo pero falle en la producción porque el daemon de Docker es el mismo en todas las máquinas de desarrollo, montaje y producción.
 \end{itemize}
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
