@@ -18,7 +18,7 @@
 		\title{\huge MÁQUINAS VIRTUALES VS CONTENEDORES}
 		
 		\author{Estrella Palacios, Katherine Lizbeth              	(2016056193))}
-		\author{Gonzales Cave, Angel Gabriel              	(2017057861))}
+		\author{Gonzales Cave, Angel Gabriel              	        (2017057861))}
 		\author{Porlles Carrillo, Diego Armando	         	(XXXXXXXXXX))} %CAMBIAR CODIGO 
 		\author{Quispe Mamani, José Luis             		(XXXXXXXXXX))} %CAMBIAR CODIGO 
 		\address{Escuela Profesional de Ingeniería de Sistemas}
@@ -48,9 +48,10 @@
 
 %% INTRODUCION ----------------------------------------------------------------------------------------------------------------
 
-\section{Introducción} 
+\section{Introducción}
 
-
+La mayoría de empresas utilizan múltiples servidores para llevar a cabo sus operaciones, y para la continuidad de sus operaciones tienen dos o mas servidores ejecutando los mismos servicios en diferentes servidores .Esto se debe a que no se puede garantizar que un sistema operativo funcione correctamente todos los días durante el año. Por esta razón cada servicio se separa y se deja funcionando en un host distinto, pero esta solución resulta costosa y difícil de administrar por el número de máquinas y el espacio requerido para su funcionamiento.
+Debido a esta problema surgieron las máquinas virtuales que permiten la ejecución de múltiples sistemas operativos llamados invitados en una sola máquina física llamada anfitrón.  
 
 
 
@@ -63,11 +64,95 @@
 
 %% PRIMERA SUBSECCION 
 
-\subsection {\textbf{A}}
+\subsection {\textbf{Máquina Virtual}}
+Una máquina virtual (VM) es una computadora compuesta completamente de software que puede ejecutar su propio sistema operativo y aplicaciones como si fuera una computadora física. Una VM se comporta exactamente como una computadora física y contiene su propia CPU virtual (basada en software), RAM, disco duro y tarjeta de interfaz de red (NIC).\cite{Citrix2018}
 
-\subsubsection{\textbf{A1}}
 
-EDITAR\\
+\subsection {\textbf{Hyper-V}}
+Hyper-V es un hipervisor que permite la virtualización de diferentes sistemas operativos, que se ejecutan al mismo tiempo sobre un sistema físico, sin que se vean interferidos entre ellos. Esta separación de entornos se consigue mediante la creación de una capa de abstracción entre el hardware de la máquina física (también conocida como host) y el sistema operativo que se ejecuta dentro del entorno virtualizado (también conocido como máquina virtual o huésped). De este modo, los diferentes recursos de la máquina física (tarjeta de red, memoria RAM, etc.) se dividen y se reparten entre uno o más entornos virtualizados.
+
+\begin{figure}[htb]
+	\begin{center}
+		\includegraphics[width=10cm]{./IMAGENES/Hyper-v} 
+		\caption{Hipervisor}
+	\end{center}
+\end{figure}
+El hipervisor, constituye una pequeña capa de software entre el hardware y los diferentes sistemas operativos instalados en el sistema. Es el encargado de ejecutar múltiples instancias de sistemas operativos de forma aislada a través del uso de múltiples instancias de ejecución conocidas como particiones.
+
+El hipervisor se divide en dos capas diferentes. La capa inferior, corresponde a la implementación de un microkernel que soporta acceso a memoria, uso de hilos, uso de señales y un mecanismo de abstracción del hardware; mientras que la capa superior, se encarga de proporcionar los servicios de virtualización.\cite{Hyperv2019}
+
+\subsubsection{\textbf{Beneficios}}
+La virtualización realizada por Hyper-V, proporciona diferentes beneficios tanto técnicos como de gestión, que
+se detallan a continuación:
+\begin{itemize}
+\item Mayor eficiencia de los recursos de la máquina física.
+\item Reducción de los costes de operación y mantenimiento de la máquina física.
+\item Reducción del tiempo requerido para el despliegue y configuración del hardware y software, así como la
+realización de las pruebas correspondientes al entorno físico sobre el que se despliega el servicio Hyper-V.
+\item Los recursos físicos son gestionados por Hyper-V para proporcionar entornos totalmente aislados.
+\item Implementación de entornos de escritorios virtuales a través de VDI.
+\item Posibilidad de crear entornos de testing o prueba sin que sea necesario obtener equipamiento hardware
+\end{itemize}
+\cite{Hyperv2019}
+
+\subsubsection{\textbf{Limitaciones}}
+El servicio Hyper-V posee una serie de limitaciones en cuanto a la cantidad de recursos que puede utilizar. Del
+mismo modo, cada una de las máquinas virtuales gestionadas por el servicio de virtualización posee una serie de
+limitaciones con respecto a sus recursos de tipo físico asignados.
+Las limitaciones del servicio Hyper-V son las siguientes:
+\begin{itemize}
+\item Número de procesadores lógicos, 512.
+\item Procesadores virtuales por cada procesador lógico, sin limitación.
+\item Máquinas virtuales en ejecución por servidor, 1024.
+\item Procesadores virtuales por servidor, 2048.
+\item Memoria RAM, 24 TB.
+\item Capacidad de almacenamiento, sin limitación. Depende de la capacidad de almacenamiento del sistema
+operativo base.
+\item Redes de área de almacenamiento (SAN) virtuales, sin limitación.
+\item Adaptadores de red físicos, sin limitación.
+\item Equipos de adaptadores de red (NIC Teaming), sin limitación.
+\item Redes virtuales (conmutadores virtuales), sin limitación. Depende de los recursos del sistema físico.
+\item Puertos de los conmutadores de red virtuales por servidor, sin limitación. Depende de los recursos del sistema físico.
+\end{itemize}
+\cite{Hyperv2019}
+
+\subsubsection{\textbf{Componentes Físicos Virtualizados}}
+El servicio Hyper-V se encarga de virtualizar los recursos físicos de los que dispone en la máquina que despliega
+el servicio de virtualización.
+Los recursos virtualizados por el servicio se indican a continuación:
+\begin{itemize}
+\item Procesadores virtuales.
+\item Memoria RAM.
+\item Discos duros virtuales.
+\item Adaptadores de red virtuales.
+\item Unidades de CD/DVD virtuales.
+\item Unidades de disquete virtuales.
+\item Adaptadores de video virtuales.
+\item Dispositivos de entrada de datos (ratón y teclado) virtuales.
+\end{itemize}
+\cite{Hyperv2019}
+
+\subsection {\textbf{XenServer}}
+XenServer es la plataforma completa de virtualización de servidores de Citrix. XenServer está optimizado para servidores virtuales Windows y Linux.
+
+XenServer se ejecuta directamente en el hardware del servidor sin requerir un sistema operativo subyacente, lo que resulta en un sistema eficiente y escalable. XenServer funciona abstrayendo elementos de la máquina física (como discos duros, recursos y puertos) y asignándolos a las máquinas virtuales que se ejecutan en él.
+
+Usar XenServer reduce los costos :
+\begin{itemize}
+\item Consolidación de múltiples máquinas virtuales en servidores físicos
+\end{itemize}
+Usar XenServer aumenta la flexibilidad al:
+\begin{itemize}
+\item Aumento de la disponibilidad de máquinas virtuales mediante el uso de alta disponibilidad para configurar políticas que reinicien máquinas virtuales en otro host XenServer si falla uno.
+\item Mayor portabilidad de las imágenes de VM, ya que una imagen de VM funcionará en una variedad de infraestructuras de implementación
+\end{itemize}
+
+\subsubsection{\textbf{vApps}}
+Una vApp es un grupo lógico de una o más máquinas virtuales (VM) relacionadas que se pueden iniciar como una sola entidad en caso de un desastre. Cuando se inicia una vApp, las máquinas virtuales contenidas en la vApp comenzarán en un orden predefinido por el usuario, para permitir que las máquinas virtuales que dependen unas de otras se secuencian automáticamente. Esto significa que un administrador ya no tiene que secuenciar manualmente el inicio de máquinas virtuales dependientes si un servicio completo requiere reiniciar.  La funcionalidad de vApp es particularmente útil en la situación de recuperación de desastres donde un administrador puede elegir agrupar todas las máquinas virtuales que residen en el mismo repositorio de almacenamiento.
+
+\subsubsection{\textbf{Monitoreo y Gestión XenServer}}
+XenServer proporciona un monitoreo detallado de las métricas de rendimiento, incluida la CPU, la memoria, el disco, la red  y el almacenamiento para cada máquina virtual.
+XenServer también proporciona alertas de sistema y rendimiento. Las alertas son notificaciones que se producen en respuesta a eventos seleccionados del sistema, o cuando la CPU, el uso de memoria, la red, el rendimiento de almacenamiento o la actividad del disco de la VM superan un umbral especificado en un host, VM o repositorio de almacenamiento administrado.\cite{Citrix2018}
 
 %%Ejemplo de cita
 \cite{Gartner} 
