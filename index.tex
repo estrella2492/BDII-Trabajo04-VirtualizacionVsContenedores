@@ -153,34 +153,8 @@ Una vApp es un grupo lógico de una o más máquinas virtuales (VM) relacionadas
 \subsubsection{\textbf{Monitoreo y Gestión XenServer}}
 XenServer proporciona un monitoreo detallado de las métricas de rendimiento, incluida la CPU, la memoria, el disco, la red  y el almacenamiento para cada máquina virtual.
 XenServer también proporciona alertas de sistema y rendimiento. Las alertas son notificaciones que se producen en respuesta a eventos seleccionados del sistema, o cuando la CPU, el uso de memoria, la red, el rendimiento de almacenamiento o la actividad del disco de la VM superan un umbral especificado en un host, VM o repositorio de almacenamiento administrado.\cite{Citrix2018}
-
-%%Ejemplo de cita
-\cite{Gartner} 
-
-\begin{itemize}
-	\item x
-	\item y
-	\item z
-\end{itemize}
-
-\subsubsection{\textbf{A2}}
-
-EDITAR\\
-
-\subsubsection{\textbf{A3}}
-
-EDITAR\\
-
-
-%% SEGUNDA SUBSECCION
-
-\subsection{\textbf{B}}
-
-\subsubsection{\textbf{B1}}
-
-EDITAR\\
-
 %% Ejemplo de inclusión de imagen
+
 \begin{figure}[htb]
 	\begin{center}
 		\includegraphics[width=14cm]{./IMAGENES/basededatos_1} 
@@ -188,30 +162,19 @@ EDITAR\\
 	\end{center}
 \end{figure}
 
-\subsubsection{\textbf{B2}}
-
-EDITAR\\
-
 %% TERCERA SUBSECCION
 \subsection{\textbf{Contenedores}}
 Para las tecnologías de la información, es bien sabido que de nada sirve un Servidor de Cómputo (equipo de cómputo físico o virtual, que permite ofrecer aplicaciones específicas a Usuarios finales), sin la piedra angular de la Infraestructura. En estos equipos es posible, tras la instalación de un robusto, seguro y escalable Sistema Operativo (como Red Hat Enterprise Linux), aprovisionar aplicaciones capaces de atender las peticiones de un Usuario, para subsanar cualquier necesidad informática. Servidores de Correo Electrónico, servidores de Páginas Web (HTTP Servers), servidores de Aplicaciones (como Red Hat JBoss Application Server), etc.
 
 Si bien las máquinas virtuales (VM) tradicionales permiten la virtualización de la infraestructura de computación, los contenedores habilitan la de las aplicaciones de software. A diferencia de las máquinas virtuales, los contenedores utilizan el sistema operativo (SO) de su host en lugar de proporcionar uno propio.
 
-¿Qué es lo que se viene a la mente cuando mencionamos la palabra "Contenedor"? Obviamente que esas inmensas cajas metálicas que, apiladas por cientos sobre buques plataforma, nos permiten trasladar de manera segura cualquier mercancía o bien usando los bastos océanos de nuestro planeta. Baste decir sólo como referencia, que aproximadamente el 95 por ciento de los bienes que se producen en cualquier país del mundo, son trasladados (exportados-importados) usando contenedores, buques plataforma y los océanos.
+¿Qué es lo que se viene a la mente cuando mencionamos la palabra Contenedor? Obviamente que esas inmensas cajas metálicas que, apiladas por cientos sobre buques plataforma, nos permiten trasladar de manera segura cualquier mercancía o bien usando los bastos océanos de nuestro planeta. Baste decir sólo como referencia, que aproximadamente el 95 por ciento de los bienes que se producen en cualquier país del mundo, son trasladados (exportados-importados) usando contenedores, buques plataforma y los océanos.
 
 \subsubsection{\textbf(¿Por qué utilizar contenedores?)}}
 Dado que no incluyen sistemas operativos completos, los contenedores requieren recursos informáticos mínimos y son rápidos y fáciles de instalar. Esta eficiencia permite que se implementen en clústeres, con contenedores individuales que encapsulan componentes únicos de aplicaciones complejas. Separar los componentes de la aplicación en diferentes contenedores permite a los desarrolladores actualizar componentes individuales sin necesidad de rehacer la aplicación completa.
 
 De manera muy semejante, los Contenedores Informáticos utilizan una pieza de software a modo de un buque plataforma (ese software casi siempre es Docker), aprovechando ese océano de recursos informáticos (procesador, memoria, red y almacenamiento) sobre el mismo Sistema Operativo.
 
-\begin{itemize}
-
-\item x
-\item y
-\item z
-
-\end{itemize}
 \subsubsection{\textbf{¿Qué es lo que dice Docker?}}
 "Una imagen de contenedor es un paquete ligero, independiente, ejecutable de una pieza de software que incluye todo lo necesario para ejecutarlo: código, tiempo de ejecución, herramientas del sistema, bibliotecas del sistema, configuraciones."
 
@@ -227,12 +190,6 @@ Ahora bien. ¿Qué es Docker? Es proyecto de código abierto que automatiza el d
 %% ANÁLISIS ( APLICACIÓN ) ---------------------------------------------------------------------------------------------------
 
 \section{Análisis}
-
-\subsection{\textbf{Análisis 1}}
-EDITAR\\
-
-\subsection{\textbf{Análisis 2}}
-EDITAR\\
 
 \subsection{\textbf{¿Por qué Contenedores y no Máquinas Virtuales?}}
 Sólo para comenzar, los Contenedores son más ligeros, requieren de menos recursos informáticos y por ende más versátiles. Al igual que las Máquinas Virtuales, ofrecen portabilidad, escalabilidad y son tan seguros como lo es el Sistema Operativo donde se están ejecutando. Lo que hace a los Contenedores, para ciertas ocasiones, no muy adecuados, es para esos escenarios en loa que se requieren Sistemas Operativos de distinta versión (sobre todo versión de Kernel), pues el requisito indispensable para que puedan ejecutarse los contenedores en el mismo servidor físico, es precisamente que todas éstas puedan ejecutarse sobre la misma versión del Kernel.
