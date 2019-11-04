@@ -19,7 +19,7 @@
 		
 		\author{Estrella Palacios, Katherine Lizbeth              	(2016056193))}
 		\author{Gonzales Cave, Angel Gabriel              	        (2017057861))}
-		\author{Porlles Carrillo, Diego Armando	         	(XXXXXXXXXX))} %CAMBIAR CODIGO 
+		\author{Porlles Carrillo, Diego Armando	         	(2015050948))} %CAMBIAR CODIGO 
 		\author{Quispe Mamani, José Luis             		(2015053235))} %CAMBIAR CODIGO 
 		\address{Escuela Profesional de Ingeniería de Sistemas}
 		\address{Universidad Privada de Tacna}
@@ -151,14 +151,7 @@ Una vApp es un grupo lógico de una o más máquinas virtuales (VM) relacionadas
 \subsubsection{\textbf{Monitoreo y Gestión XenServer}}
 XenServer proporciona un monitoreo detallado de las métricas de rendimiento, incluida la CPU, la memoria, el disco, la red  y el almacenamiento para cada máquina virtual.
 XenServer también proporciona alertas de sistema y rendimiento. Las alertas son notificaciones que se producen en respuesta a eventos seleccionados del sistema, o cuando la CPU, el uso de memoria, la red, el rendimiento de almacenamiento o la actividad del disco de la VM superan un umbral especificado en un host, VM o repositorio de almacenamiento administrado.\cite{Citrix2018}
-%% Ejemplo de inclusión de imagen
 
-\begin{figure}[htb]
-	\begin{center}
-		\includegraphics[width=14cm]{./IMAGENES/basededatos_1} 
-		\caption{Incluyendo la base de datos en DevOps}
-	\end{center}
-\end{figure}
 
 %% TERCERA SUBSECCION
 \subsection{\textbf{Contenedores}}
@@ -168,10 +161,18 @@ Si bien las máquinas virtuales (VM) tradicionales permiten la virtualización d
 
 ¿Qué es lo que se viene a la mente cuando mencionamos la palabra Contenedor? Obviamente que esas inmensas cajas metálicas que, apiladas por cientos sobre buques plataforma, nos permiten trasladar de manera segura cualquier mercancía o bien usando los bastos océanos de nuestro planeta. Baste decir sólo como referencia, que aproximadamente el 95 por ciento de los bienes que se producen en cualquier país del mundo, son trasladados (exportados-importados) usando contenedores, buques plataforma y los océanos.
 
-\subsubsection{\textbf(¿Por qué utilizar contenedores?)}}
+\subsubsection{\textbf{(¿Por qué utilizar contenedores?)}}
 Dado que no incluyen sistemas operativos completos, los contenedores requieren recursos informáticos mínimos y son rápidos y fáciles de instalar. Esta eficiencia permite que se implementen en clústeres, con contenedores individuales que encapsulan componentes únicos de aplicaciones complejas. Separar los componentes de la aplicación en diferentes contenedores permite a los desarrolladores actualizar componentes individuales sin necesidad de rehacer la aplicación completa.
 
 De manera muy semejante, los Contenedores Informáticos utilizan una pieza de software a modo de un buque plataforma (ese software casi siempre es Docker), aprovechando ese océano de recursos informáticos (procesador, memoria, red y almacenamiento) sobre el mismo Sistema Operativo.
+
+%%PORLLES   [1]  https://cloud.google.com/containers/
+En lugar de virtualizar el hardware como ocurre con el enfoque de las máquinas virtuales, los contenedores se virtualizan a nivel del sistema operativo, con múltiples contenedores ejecutándose directamente sobre el núcleo del sistema operativo. Esto significa que los Contenedores son mucho más livianos (necesitan menos memoria RAM), comparten el núcleo del sistema operativo, se inicializan –bootstrap– mucho más rápido y usan una fracción de la memoria en comparación con el que necesita un sistema operativo
+
+%%---------
+
+
+
 
 \subsubsection{\textbf{¿Qué es lo que dice Docker?}}
 Una imagen de contenedor es un paquete ligero, independiente, ejecutable de una pieza de software que incluye todo lo necesario para ejecutarlo: código, tiempo de ejecución, herramientas del sistema, bibliotecas del sistema, configuraciones.
@@ -183,6 +184,29 @@ Ahora bien. ¿Qué es Docker? Es proyecto de código abierto que automatiza el d
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
  
+%%PORLLES------  [2] https://www.saturnb2b.com/wp-content/uploads/2017/12/Pub-10010-Containers-for-Dummies.pdf
+\subsubsection{\textbf{Impacto en los Procesos TI}}
+
+Como fue el caso con la Virtualización, los Contenedores traen consigo una cantidad de impactos positivos en los procesos TI. El primero gira alrededor de la gestión. En procesos tradicionales, operaciones de TI tiene mucha responsabilidad, que a menudo no se comparte con el grupo de desarrollo u otras áreas de la organización [1]. Algunos procesos tradicionales incluyen el uso de máquinas virtuales, actualización periódica del software, nuevas implementaciones del servidor físico, sincronización entornos de prueba / desarrollo y producción, gestión de la seguridad, y mucho más.
+%%----------------
+
+%% PORLLES ---- [3] https://www.gb-advisors.com/es/containers-5-practicas-de-seguridad/
+\subsubsection{\textbf{Características de un contenedor}}
+
+
+\begin{itemize}
+
+\item Representan recursos virtuales
+\item  Ocupan poco espacio
+\item  Están basados en imágenes. (En este contexto una imagen corresponde a un archivo con todos los elementos necesarios para ejecutar el contenedor; y metadatos que describen las capacidades y necesidades del mismo.)
+\item  No necesitan un sistema operativo propio; pues utilizan el kernel del mismo sistema operativo que los hospeda.
+\item  Comparten el sistema operativo principal con otros containers dentro de un mismo servidor. 
+
+\end{itemize}
+
+
+
+%%---------------------------------
 
 
 %% ANÁLISIS ( APLICACIÓN ) ---------------------------------------------------------------------------------------------------
@@ -200,9 +224,6 @@ Los Contenedores aíslan las aplicaciones entre sí, a menos que se les conecte 
 \subsection{\textbf{¿Cómo podemos ofrecer una solución segura, confiable, escalable y completa de Contenedores con Software Red Hat?}}
 Infraestructura con Red Hat Enterprise Linux: Manténgase ligero y ejecute sus contenedores Linux con un sistema operativo optimizado, seguro y de mínima huella. Platadorma con Red Hat Open Shift: Desarrolle, implemente y administre sus contenedores en cualquier lugar, a cualquier escala. Red Hat® OpenShift es una plataforma de aplicaciones de contenedores que incluye Docker y Kubernetes. Independientemente de la arquitectura de sus aplicaciones, OpenShift le permite construir, desarrollar e implementar fácil y rápidamente en casi cualquier infraestructura, pública o privada
 
-\subsection{\textbf{ Elección entre contenedor y maquina virtual}}
-Los contenedores tienen como principal beneficio el aislamiento de aplicaciones y va a compartir los recursos entre todos los contenedores optimizando su uso mientras las máquinas virtuales permiten la administracion del hardware para crear múltiples maquinas en un servidor o varios. Además los contenedores son mucho más ligeros que las máquinas virtuales con el uso de contenedores ya no es necesario instalar multiples sistemas operativos para varias aplicaciones.
- 
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -214,7 +235,7 @@ Los contenedores tienen como principal beneficio el aislamiento de aplicaciones 
 
 \item Conclusion 1 : \\ Los contenedores permiten desplegar aplicaciones más rápido, arrancarlas y pararlas más rápido y aprovechar mejor los recursos de hardware. Las máquinas virtuales nos permiten crear sistemas completos totalmente aislados, con mayor control sobre el entorno y mezclando sistemas operativos host y huésped. 
 
-\item Conclusion 2 : \\ Si bien usamos los contenedores para desarrollar y desplegar aplicaciones de forma sencilla y rápida la mayoría de las empresas todavía mantienen el uso de máquinas virtuales por su flexibilidad en casos de desastres gracias a que si un servidor falla, la maquina virtual levantará un servidor espejo.
+\item Conclusion 2 : \\ 
 
 \item Conclusion 3 : \\ 
 
