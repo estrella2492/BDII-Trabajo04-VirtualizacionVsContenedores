@@ -27,9 +27,8 @@
 		
 %% ABSTRACT --------------------------------------------------------------------------------------------------------------------
 
-		\begin{abstract}
-		
-
+		\begin{abstract}	
+Each virtual machine instantiated by a hypervisor loads an image of the entire operating system into memory, but the Docker containers will share a single image in memory. This makes Docker containers lightweight and can be initialized in seconds. Each container executed a Docker image that packages the application, all its dependencies and the execution environment; Docker images apart from being versionable are very portable between the different environments of the systems development cycle, creating a simple and safe process.
 
 		\end{abstract}
 
@@ -40,8 +39,7 @@
 %% RESUMEN ---------------------------------------------------------------------------------------------------------------------
 
 \section{Resumen}
-
-
+Cada máquina virtual instanciada por un hipervisor carga en memória una imagem de sistema operacional completa en cambio los contenedores Docker compartirán una única imagen en memoria. Esto hace que los contenedores Docker sean ligeros y puedan ser inicializados en segundos. Cada contenedor ejecuta una imagen Docker que empaqueta la aplicación, todas sus dependencias y el ambiente de ejecución; las imágenes Docker aparte de ser versionables son muy portables entre los diferentes ambientes del ciclo de desarrollo de sistemas, creando un proceso simple y seguro. 
 
 %% ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -190,6 +188,9 @@ Ahora bien. ¿Qué es Docker? Es proyecto de código abierto que automatiza el d
 %% ANÁLISIS ( APLICACIÓN ) ---------------------------------------------------------------------------------------------------
 
 \section{Análisis}
+\subsection{\textbf{Virtualización vs Contenedores}}
+Cuando nos referimos a virtualización pensamos inmediatamente en máquinas virtuales, pero es importante entender que este es solo un tipo de virtualización en el cual se habilita un sistema operativo el cual tiene la ilusión de que posee recursos dedicados para operar. Entendiendo lo anterior podemos ahora definir a Contenedores como otra alternativa de virtualización.
+Cada tecnología tiene sus aplicaciones y sus ventajas según las necesidades y circunstancias de cada desarrollo. En la actualidad los contenedores en general y Docker en particular se están convirtiendo en una tecnología indispensable y cada vez se utilizan para más cosas, no solo para desplegar aplicaciones en producción, sino también para crear entornos de desarrollo replicables entre todos los miembros de un equipo, asegurar que las aplicaciones se van a ejecutar igual en todos los entornos (desarrollo, pruebas y producción), etc. 
 
 \subsection{\textbf{¿Por qué Contenedores y no Máquinas Virtuales?}}
 Sólo para comenzar, los Contenedores son más ligeros, requieren de menos recursos informáticos y por ende más versátiles. Al igual que las Máquinas Virtuales, ofrecen portabilidad, escalabilidad y son tan seguros como lo es el Sistema Operativo donde se están ejecutando. Lo que hace a los Contenedores, para ciertas ocasiones, no muy adecuados, es para esos escenarios en loa que se requieren Sistemas Operativos de distinta versión (sobre todo versión de Kernel), pues el requisito indispensable para que puedan ejecutarse los contenedores en el mismo servidor físico, es precisamente que todas éstas puedan ejecutarse sobre la misma versión del Kernel.
@@ -208,7 +209,7 @@ Infraestructura con Red Hat Enterprise Linux: Manténgase ligero y ejecute sus c
 
 \begin{itemize}
 
-\item Conclusion 1 : \\
+\item Conclusion 1 : \\ Los contenedores permiten desplegar aplicaciones más rápido, arrancarlas y pararlas más rápido y aprovechar mejor los recursos de hardware. Las máquinas virtuales nos permiten crear sistemas completos totalmente aislados, con mayor control sobre el entorno y mezclando sistemas operativos host y huésped. 
 
 \item Conclusion 2 : \\ 
 
@@ -227,5 +228,7 @@ El uso de  Contenedores para una integración e implementación continua es posi
 	\bibliographystyle{apalike} 	%ESTILO
 	\bibliography{BIBLIOGRAFIA}	 
 	
+	%% https://www.campusmvp.es/recursos/post/que-diferencia-hay-entre-docker-contenedores-y-maquinas-virtuales.aspx
+	%% https://www.fayerwayer.com/2016/06/maquinas-virtuales-vs-contenedores-que-son-y-como-elegir-entre-estas-tecnologias/
 	
 \end{document}
